@@ -1,41 +1,53 @@
 <template>
   <div style="flat">
-    <div>
-    <el-image
-      style="width: 100px; height: 100px; float: left; left: 10%"
-      src="../../static/logo.png"
-      fit="fill"
-    ></el-image>
-    </div>
-    <div>
-      <div>
-        <h1><span style="font-weight:normal;font-family:FZKai-Z03S;color:#2E324C">人机物融合的云计算平台</span></h1>
-      </div>
-      <div style="width:20%">
-         <el-input
-    placeholder="请输入内容"
-    prefix-icon="el-icon-search"
-    v-model="input"
-    style="font-size:10px">
-  </el-input>
-  
-      </div>
-    </div>
-    <div style="border-bottom: solid 1px #e6e6e6">
-      <el-menu
-        :default-active="activeIndex"
-        class="el-menu-demo"
-        mode="horizontal"
-        @select="handleSelect"
-        style="border-bottom: none;"
-      >
-        <el-menu-item index="1">资源提供者</el-menu-item>
-
-        <el-menu-item index="2">资源使用者/应用开发者</el-menu-item>
-        <el-menu-item index="3">资源联盟</el-menu-item>
-      </el-menu>
-      <div class="line"></div>
-    </div>
+    <el-row>
+      <el-col :span="3" :offset="3">
+        <el-image
+          style="width: 60%;height: 60%;"
+          src="../../static/logo.png"
+          fit="fill"
+        ></el-image>
+      </el-col>
+      <el-col :span="12">
+        <h1>
+          <span
+            style="font-weight: normal; font-family:cursive; color: #2e324c;font-size: 2em;"
+            >人机物融合的云计算平台</span
+          >
+        </h1>
+      </el-col>
+    </el-row>
+    <el-row style="border-bottom:1px solid rgb(230, 230, 230)">
+      <el-col :span="12" :offset="4">
+          <el-menu
+            :default-active="activeIndex"
+            class="el-menu-demo"
+            mode="horizontal"
+            @select="handleSelect"
+            style="border-bottom: none"
+          >
+            <el-menu-item index="1">资源提供者</el-menu-item>
+            <el-menu-item index="2">资源使用者/应用开发者</el-menu-item>
+            <el-menu-item index="3">资源联盟</el-menu-item>
+          </el-menu>
+          <!-- <div class="line"></div> -->
+     
+      </el-col>
+      <el-col :span="4" style="padding-top: 1%">
+    
+          <el-input
+            placeholder="请输入内容"
+            prefix-icon="el-icon-search"
+            v-model="input"
+            style="font-size: 10px;"
+            size="small"
+          
+          >
+            <el-button slot="append" >搜索</el-button>
+          </el-input>
+       
+      </el-col>
+    </el-row>
   </div>
 </template>
 <script>
@@ -44,7 +56,7 @@ export default {
     return {
       activeIndex: "1",
       activeIndex2: "1",
-      input:''
+      input: "",
     };
   },
   methods: {
@@ -52,6 +64,16 @@ export default {
       console.log(key, keyPath);
     },
   },
-  
 };
 </script>
+
+<style scoped>
+.el-menu-item{
+  padding:0 40px !important
+}
+</style>
+<style>
+.el-input-group__append{
+  background-color: #2e324c !important;
+}
+</style>
