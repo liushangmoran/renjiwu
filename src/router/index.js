@@ -4,6 +4,7 @@ import head from '@/components/head'
 import ResourceService from '@/components/resource-usage/resource-service'
 import ApplicationService from '@/components/resource-usage/application-service'
 import BestPractice from '@/components/resource-usage/best-practice'
+import SideBar from '@/components/resource-provider/sidebar'
 
 Vue.use(Router)
 
@@ -11,8 +12,8 @@ export default new Router({
   routes: [
     {
       path: '/',
-      name: 'ResourceService',
-      component: ResourceService
+      name: 'SideBar',
+      component: SideBar
     }
   ]
 })
