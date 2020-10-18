@@ -5,15 +5,15 @@ import ResourceService from '@/components/resource-usage/resource-service'
 import ApplicationService from '@/components/resource-usage/application-service'
 import BestPractice from '@/components/resource-usage/best-practice'
 import SideBar from '@/components/resource-provider/sidebar'
-
+import DataView from '@/components/resource-league/data-view'
 Vue.use(Router)
 
 export default new Router({
   routes: [
     {
       path: '/',
-      name: 'SideBar',
-      component: SideBar
+      name: 'DataView',
+      component: DataView
     }
   ]
 })
