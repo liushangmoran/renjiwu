@@ -17,71 +17,78 @@
       </el-col>
       <el-col span="4" offset="1">
         <el-row class="title">设备数量</el-row>
-        <el-row class="deviceAmount" :style="{ width: '100%', height: '120px' }">
-          <el-col><el-image
-          style="width: 50%;height: 40%;margin-top:25%;margin-left:10%"
-          src="../../static/1.png"
-          fit="fill"
-        ></el-image>6
+        <el-row
+          class="deviceAmount"
+          :style="{ width: '100%', height: '120px' }"
+        >
+          <el-col
+            ><el-image
+              style="width: 50%; height: 40%; margin-top: 25%; margin-left: 10%"
+              src="../../static/1.png"
+              fit="fill"
+            ></el-image
+            >6
           </el-col>
         </el-row>
         <el-row class="title">设备位置</el-row>
         <el-row class="deviceArea" :style="{ width: '100%', height: '120px' }">
-          <el-col><el-image
-          style="width: 50%;height: 40%;margin-top:25%;margin-left:10%"
-          src="../../static/1.png"
-          fit="fill"
-        ></el-image>6
+          <el-col
+            ><el-image
+              style="width: 50%; height: 40%; margin-top: 25%; margin-left: 10%"
+              src="../../static/2.png"
+              fit="fill"
+            ></el-image
+            >6
           </el-col>
         </el-row>
       </el-col>
     </el-row>
-    <el-row class="chart"> 
-<el-table
-      :data="tableData"
-      style="width: 100%">
-      <el-table-column
-        prop="date"
-        label="日期"
-        width="180">
-      </el-table-column>
-      <el-table-column
-        prop="name"
-        label="姓名"
-        width="180">
-      </el-table-column>
-      <el-table-column
-        prop="address"
-        label="地址">
-      </el-table-column>
-    </el-table>
+    <el-row class="chart">
+      <el-table :data="tableData" style="width: 100%">
+        <el-table-column prop="date" label="日期" width="180">
+        </el-table-column>
+        <el-table-column prop="name" label="姓名" width="180">
+        </el-table-column>
+        <el-table-column prop="address" label="地址"> </el-table-column>
+      </el-table>
     </el-row>
   </div>
 </template>
 <script >
+import head from "../head";
+import sidebar from "./sidebar";
 export default {
+  components: {
+    head,
+    sidebar,
+  },
   data() {
     return {
       activeIndex: "1",
       activeIndex2: "1",
       input: "",
-       tableData: [{
-            date: '2016-05-02',
-            name: '王小虎',
-            address: '上海市普陀区金沙江路 1518 弄'
-          }, {
-            date: '2016-05-04',
-            name: '王小虎',
-            address: '上海市普陀区金沙江路 1517 弄'
-          }, {
-            date: '2016-05-01',
-            name: '王小虎',
-            address: '上海市普陀区金沙江路 1519 弄'
-          }, {
-            date: '2016-05-03',
-            name: '王小虎',
-            address: '上海市普陀区金沙江路 1516 弄'
-          }]
+      tableData: [
+        {
+          date: "2016-05-02",
+          name: "王小虎",
+          address: "上海市普陀区金沙江路 1518 弄",
+        },
+        {
+          date: "2016-05-04",
+          name: "王小虎",
+          address: "上海市普陀区金沙江路 1517 弄",
+        },
+        {
+          date: "2016-05-01",
+          name: "王小虎",
+          address: "上海市普陀区金沙江路 1519 弄",
+        },
+        {
+          date: "2016-05-03",
+          name: "王小虎",
+          address: "上海市普陀区金沙江路 1516 弄",
+        },
+      ],
     };
   },
   mounted() {
@@ -107,18 +114,16 @@ export default {
               { value: 3, name: "直接访问" },
               { value: 4, name: "搜索引擎" },
             ],
-            itemStyle: 
-            {
-              normal: 
-              {
+            itemStyle: {
+              normal: {
                 label: {
                   show: true,
                   formatter: "{b} : \n{c} ({d}%)",
                 },
                 labelLine: { show: true },
-              }
-            }
-          }
+              },
+            },
+          },
         ],
         legend: {
           top: "250px",
@@ -148,18 +153,16 @@ export default {
               { value: 3, name: "直接访问" },
               { value: 4, name: "搜索引擎" },
             ],
-            itemStyle: 
-            {
-              normal: 
-              {
+            itemStyle: {
+              normal: {
                 label: {
                   show: true,
                   formatter: "{b} : \n{c} ({d}%)",
                 },
                 labelLine: { show: true },
-              }
-            }
-          }
+              },
+            },
+          },
         ],
         legend: {
           top: "250px",
@@ -181,37 +184,33 @@ export default {
 .pic {
   font-family: cursive;
   font-size: 22px;
-
-  margin-top: 10px;
+  margin-top: 7%;
   width: 800px;
   height: 280px;
   top: 50%;
-  left: 23%;
+  left: 16%;
   font-family: cursive;
 }
-#chartOne
-{
-  margin-top:-10% ;
+#chartOne {
+  margin-top: -10%;
 }
-#chartTwo
-{
-  margin-top:-10% ;
+#chartTwo {
+  margin-top: -10%;
 }
 .title {
   background-color: #2e324c !important;
   color: #fff !important;
 }
-.chart{
+.chart {
   font-family: cursive;
   font-size: 22px;
-  margin-top: 10px;
+  margin-top: 7%;
   width: 800px;
   margin-top: 5%;
   height: 400px;
   top: 60%;
-  left: 23%;
+  left: 16%;
   font-family: cursive;
-  
 }
 </style>
 

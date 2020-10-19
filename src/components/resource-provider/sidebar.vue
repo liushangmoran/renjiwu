@@ -1,6 +1,6 @@
 <template>
   <!-- sidebar -->
-  <div style="width: 10%; height: 600px">
+  <div style="width: 10%; height: 800px;marg">
     <div class="title">
       资源提供者
       <i class="el-icon-circle-plus-outline"></i>

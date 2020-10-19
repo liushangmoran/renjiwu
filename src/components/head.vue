@@ -1,4 +1,5 @@
 <template>
+<el-header>
   <div style="flat">
     <el-row>
       <el-col :span="3" :offset="3">
@@ -49,6 +50,7 @@
       </el-col>
     </el-row>
   </div>
+</el-header>
 </template>
 <script>
 export default {
