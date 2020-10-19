@@ -6,14 +6,15 @@ import ApplicationService from '@/components/resource-usage/application-service'
 import BestPractice from '@/components/resource-usage/best-practice'
 import SideBar from '@/components/resource-provider/sidebar'
 import DataView from '@/components/resource-league/data-view'
+import DhysicalDevice from '@/components/resource-provider/physical-device'
 Vue.use(Router)
 
 export default new Router({
   routes: [
     {
       path: '/',
-      name: 'DataView',
-      component: DataView
+      name: 'DhysicalDevice',
+      component: DhysicalDevice
     }
   ]
 })
