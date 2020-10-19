@@ -1,5 +1,3 @@
-
-
 <template class="a">
   <div class="panel">
     <el-row class="title-bar">北大数瑞数字对象体系可信平台（BDOA）</el-row>
