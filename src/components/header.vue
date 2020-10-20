@@ -28,7 +28,7 @@
             style="border-bottom: none"
             router
           >
-            <el-menu-item index="/">资源提供者</el-menu-item>
+            <el-menu-item index="/index">资源提供者</el-menu-item>
             <el-menu-item index="/usage">资源使用者/应用开发者</el-menu-item>
             <el-menu-item index="3">资源联盟</el-menu-item>
           </el-menu>
