@@ -5,14 +5,13 @@ import ResourceService from '@/components/resource-usage/resource-service'
 import ApplicationService from '@/components/resource-usage/application-service'
 import BestPractice from '@/components/resource-usage/best-practice'
 import SideBar from '@/components/resource-provider/sidebar'
-import DataView1 from '@/components/resource-league/data-view'
+import dataView from '@/components/resource-league/data-view'
 import PhysicalDevice from '@/components/resource-provider/physical-device'
 import Index from '@/components/index'
 import Usage from '@/components/resource-usage/usage'
 import Resource from '@/components/resource-usage/resource'
 import Login from '@/components/resource-league/login'
 // import { component } from 'vue/types/umd'
-
 Vue.use(Router)
 
 export default new Router({
@@ -34,7 +33,9 @@ export default new Router({
     },
     {
       path: '/login',
+
       name: 'Login',
+      name: 'login',
       component: Login
     },
     {
@@ -76,6 +77,7 @@ export default new Router({
         }
       ]
     },
+    
     // {
     //   path: '/physical-device',
     //   redirect:'PhysicalDevice',
