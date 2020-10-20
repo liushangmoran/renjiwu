@@ -11,6 +11,7 @@
       background-color="#2e324c"
       text-color="#fff"
       active-text-color="#ffd04b"
+      router
     >
       <el-menu-item style="padding-left:0%" index="1">
         <div>
@@ -23,7 +24,7 @@
           <span>存储资源</span>
           <i class="el-icon-arrow-right"></i>
       </el-menu-item>
-      <el-menu-item style="padding-left:0%" index="3">
+      <el-menu-item style="padding-left:0%" index="/resource-league">
         <span>网络资源</span>
         <i class="el-icon-arrow-right"></i>
       </el-menu-item>

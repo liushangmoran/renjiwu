@@ -18,34 +18,33 @@ export default new Router({
       path: '/',
       name: 'Index',
       component: Index
-
-    // },
-    // {
-    //   path: '/physical-device',
-    //   redirect:'PhysicalDevice',
-    //   component:Index,
-    //   name:'首页',
-    //   children:[
-    //     {
-    //       path:'/',
-    //       component:PhysicalDevice,
-    //       matchAs:1
-    //     }
-    //   ]
-    // }
-    // ,
-    // {
-    //   path:'/resource-league',
-    //   redirect:'resource-league',
-    //   component:Index,
-    //   name:'首页',
-    //   children:[
-    //     {
-    //       path:'/',
-    //       component:DataView1,
-    //       matchAs:1
-    //     }
-    //   ]
+    },
+    {
+      path: '/physical-device',
+      redirect:'PhysicalDevice',
+      component:Index,
+      name:'首页',
+      children:[
+        {
+          path:'/',
+          component:PhysicalDevice,
+          matchAs:1
+        }
+      ]
+    }
+    ,
+    {
+      path:'/resource-league',
+      redirect:'resource-league',
+      component:Index,
+      name:'首页',
+      children:[
+        {
+          path:'/',
+          component:DataView1,
+          matchAs:1
+        }
+      ]
      }
   ]
 })
