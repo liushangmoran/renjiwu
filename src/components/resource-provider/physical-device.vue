@@ -200,6 +200,7 @@ export default {
   top: 60%;
   font-family: cursive;
   background-color: white;
+  margin-bottom: 0px;
 }
 </style>
 

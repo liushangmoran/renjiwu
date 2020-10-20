@@ -10,7 +10,7 @@
       background-color="#2e324c"
       text-color="#fff"
       active-text-color="#ffd04b"
-      router="true"
+      router
     >
       <el-menu-item style="padding-left:0%" index="/resource-service">
         <div>
@@ -22,7 +22,7 @@
           <span>应用服务</span>
           <i class="el-icon-arrow-right"></i>
       </el-menu-item>
-      <el-menu-item style="padding-left:0%" index="/application-service">
+      <el-menu-item style="padding-left:0%" index="/best-practice">
         <span>最佳实践</span>
         <i class="el-icon-arrow-right"></i>
       </el-menu-item>
