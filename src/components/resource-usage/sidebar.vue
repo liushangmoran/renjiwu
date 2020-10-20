@@ -5,7 +5,7 @@
       资源使用者/应用开发者
     </div>
     <el-menu
-      default-active="1"
+      default-active="/resource-service"
       class="el-menu-vertical-demo"
       background-color="#2e324c"
       text-color="#fff"

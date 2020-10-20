@@ -10,6 +10,7 @@ import PhysicalDevice from '@/components/resource-provider/physical-device'
 import Index from '@/components/index'
 import Usage from '@/components/resource-usage/usage'
 import Resource from '@/components/resource-usage/resource'
+import Login from '@/components/resource-league/login'
 // import { component } from 'vue/types/umd'
 
 Vue.use(Router)
@@ -30,6 +31,11 @@ export default new Router({
       path: '/resource',
       name: 'Resource',
       component: Resource
+    },
+    {
+      path: '/login',
+      name: 'Login',
+      component: Login
     },
     {
       path: '/resource-service',

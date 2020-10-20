@@ -1,50 +1,31 @@
 <template>
   <!-- sidebar -->
-  <div style="width: 100%; height: 720px;" class="side">
+  <div style="width: 100%; height: 700px;" class="side">
     <div class="title">
-      资源提供者
-      <i class="el-icon-circle-plus-outline"></i>
+      资源联盟
     </div>
     <el-menu
-      default-active="/index"
+      default-active="/login"
       class="el-menu-vertical-demo"
       background-color="#2e324c"
       text-color="#fff"
       active-text-color="#ffd04b"
       router
     >
-      <el-menu-item style="padding-left:0%" index="">
+      <el-menu-item style="padding-left:0%" index="/login">
         <div>
-          <span>计算资源</span>
+          <span>数据视角</span>
           <i class="el-icon-arrow-right"></i>
         </div>
-        
       </el-menu-item>
       <el-menu-item style="padding-left:0%" index="">
-          <span>存储资源</span>
+          <span>运维视角</span>
           <i class="el-icon-arrow-right"></i>
       </el-menu-item>
       <el-menu-item style="padding-left:0%" index="">
-        <span>网络资源</span>
+        <span>应用视觉</span>
         <i class="el-icon-arrow-right"></i>
       </el-menu-item>
-      <el-menu-item style="padding-left:0%" index="">
-        <span>数据资源</span>
-        <i class="el-icon-arrow-right"></i>
-      </el-menu-item>
-      <el-menu-item style="padding-left:0%" index="">
-        <span>服务资源</span>
-        <i class="el-icon-arrow-right"></i>
-      </el-menu-item>
-      <el-menu-item style="padding-left:0%" index="">
-        <span>人力资源</span>
-        <i class="el-icon-arrow-right"></i>
-      </el-menu-item>
-      <el-menu-item style="padding-left:0%" index="/index">
-        <span>物理设备资源</span>
-        <i class="el-icon-arrow-right"></i>
-      </el-menu-item>
-      
     </el-menu>
   </div>
 </template>
