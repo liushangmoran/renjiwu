@@ -44,7 +44,7 @@
             size="small"
           
           >
-            <el-button slot="append" >搜索</el-button>
+            <el-button slot="append" style="color:white" >搜索</el-button>
           </el-input>
        
       </el-col>

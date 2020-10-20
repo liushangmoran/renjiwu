@@ -1,6 +1,6 @@
 <template>
   <div class="container">
-    <div class="content">
+    <el-row style="margin-bottom: 20px;">
       <el-input
         style="height: 30px；width:50%"
         placeholder="请输入搜索内容"
@@ -8,43 +8,51 @@
         v-model="input"
       >
       </el-input>
-      <div class="main">
+    </el-row>
+    <el-row>
+      <el-col :span="5">
+        <div class="myDiv">
           <div class="items">智慧城市</div>
           <div class="items">数据检索</div>
           <div class="items">电子政务</div>
           <div class="items">智能家居</div>
           <div class="items">更多</div>
         </div>
-      </div>
-    </div>
+        </el-col>
+    </el-row>
   </div>
 </template>
 <style>
+hr{
+  background-color:#eaeaea; 
+  height:1.5px; 
+  border:none;
+  margin-bottom: 15px;
+}
 .items{
-  height: 45px;
+      margin-bottom: 20px;
+      font-size: 13px;
 }
-.main{
-  display: flex;
-  flex-direction: column;
-  flex-wrap: wrap;
-  height: 100%;
-  margin: 15px auto;
-  text-align: left;
+.container{
+  width: 73%;
+    height: 607px;
+    text-align: left;
+    background-color: white;
+    padding: 10px 20px 0 20px;
 }
-.mydiv{
-  width: 13%;
+.el-col-5{
+  width: 25%;
+}
+.mydiv {
+  width: 70%;
   margin-bottom: 60px;
 }
-.el-input__inner{
+.el-input__inner {
   background-color: #f9f6f6;
+  height: 30px;
 }
-.container {
-  width: 100%;
-  height: 100%;
-}
-.content {
-  height: 80%;
-  padding: 10px;
+.el-input__icon{
+  line-height: 32px;
 }
 el-input {
   width: 95%;
