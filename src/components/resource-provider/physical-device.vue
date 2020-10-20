@@ -179,10 +179,10 @@ export default {
 .pic {
   font-family: cursive;
   font-size: 22px;
-  margin-top: 2%;
+  
   width: 800px;
   height: 280px;
-  left: 11%;
+  
   font-family: cursive;
 }
 #chartOne {
@@ -203,7 +203,7 @@ export default {
   margin-top: 5%;
   height: 400px;
   top: 60%;
-  left: 16%;
+  
   font-family: cursive;
 }
 </style>

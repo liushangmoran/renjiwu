@@ -2,8 +2,8 @@
   <el-container>
   <el-header style="height:auto"><navheader></navheader></el-header>
   <el-container>
-    <el-aside ><sidebar style="width: 180px;"></sidebar></el-aside>
-    <el-main class="elMain"><physicalDevice></physicalDevice></el-main>
+    <el-aside style="width: 210px;margin-left: 14%;"><sidebar style="width: 180px;"></sidebar></el-aside>
+    <el-main class="elMain" ><physicalDevice></physicalDevice></el-main>
   </el-container>
 </el-container>
 </template>
@@ -24,10 +24,6 @@ export default {
   body{
     margin: 0px;
   }
-  .elMain{
-  width: 800px;
-  height: 800px;
-  left: 11%;
-  }
+
 </style>
 
