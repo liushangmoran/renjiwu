@@ -52,12 +52,10 @@ export default {
   font-family: cursive;
   font-size: 22px;
   color: #fff !important;
-  margin-top: 10px;
   width: 800px;
   background-color: #2e324c !important;
-  top: 50%;
-  left: 23%;
   font-family: cursive;
+  width: 100%;
 }
 .user {
   font-size: 8px;
@@ -69,9 +67,7 @@ export default {
   float: left;
   position: absolute;
   width: 800px;
-  left: 23%;
   background-color: #F8F8FA !important;
-  height: 560px;
   margin-top: -20px;
   margin-left: 4px;
   box-shadow: 0px 0px 5px #F8F8FA;
@@ -80,8 +76,8 @@ export default {
   float: left;
   position: absolute;
   padding: 20px 30px;
-  top: 20%;
-  left: 23%;
+  margin-top: 10%;
+  left: 28%;
   width: 420px;
   border-radius: 4px;
   background-color: #ddd0d096 !important;
@@ -96,5 +92,10 @@ export default {
 .login-button {
   font-size: 10px;
   width: 100%;
+}
+.panel{
+  background-color:#f0f0f3;
+    height: 608px;
+    width: 76%;
 }
 </style>

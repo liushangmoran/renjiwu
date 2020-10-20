@@ -9,7 +9,6 @@ import DataView1 from '@/components/resource-league/data-view'
 import PhysicalDevice from '@/components/resource-provider/physical-device'
 import Index from '@/components/index'
 // import { component } from 'vue/types/umd'
-
 Vue.use(Router)
 
 export default new Router({

@@ -1,8 +1,8 @@
 <template>
   <!-- sidebar -->
-  <div style="width: 100%; height: 720px;" class="side">
+  <div style="width: 100%; height: 700px;" class="side">
     <div class="title">
-      资源使用者/应用开发者
+      资源联盟
     </div>
     <el-menu
       default-active="1"
@@ -14,16 +14,16 @@
     >
       <el-menu-item style="padding-left:0%" index="/resource-service">
         <div>
-          <span>资源服务</span>
+          <span>数据视角</span>
           <i class="el-icon-arrow-right"></i>
         </div>
       </el-menu-item>
       <el-menu-item style="padding-left:0%" index="/application-service">
-          <span>应用服务</span>
+          <span>运维视角</span>
           <i class="el-icon-arrow-right"></i>
       </el-menu-item>
       <el-menu-item style="padding-left:0%" index="/application-service">
-        <span>最佳实践</span>
+        <span>应用视觉</span>
         <i class="el-icon-arrow-right"></i>
       </el-menu-item>
     </el-menu>
