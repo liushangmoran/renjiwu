@@ -5,25 +5,25 @@
         <el-row class="title">设备类型</el-row>
         <el-row
           id="chartOne"
-          :style="{ width: '100%', height: '300px' }"
+          :style="{ width: '100%', height: '245px', background: 'white' }"
         ></el-row>
       </el-col>
       <el-col :span="9" :offset="1">
         <el-row class="title">设备品牌</el-row>
         <el-row
           id="chartTwo"
-          :style="{ width: '100%', height: '300px' }"
+          :style="{ width: '100%', height: '245px', background: 'white' }"
         ></el-row>
       </el-col>
       <el-col :span="4" :offset="1">
         <el-row class="title">设备数量</el-row>
         <el-row
           class="deviceAmount"
-          :style="{ width: '100%', height: '120px' }"
+          :style="{ width: '100%', height: '98px', background: 'white' }"
         >
           <el-col
             ><el-image
-              style="width: 50%; height: 40%; margin-top: 25%; margin-left: 10%"
+              style="width: 50%; height: 40%; margin-top: 10%; margin-left: 10%"
               src="../../static/1.png"
               fit="fill"
             ></el-image
@@ -31,10 +31,10 @@
           </el-col>
         </el-row>
         <el-row class="title">设备位置</el-row>
-        <el-row class="deviceArea" :style="{ width: '100%', height: '120px' }">
+        <el-row class="deviceArea" :style="{ width: '100%', height: '98px', background: 'white' }">
           <el-col
             ><el-image
-              style="width: 50%; height: 40%; margin-top: 25%; margin-left: 10%"
+              style="width: 50%; height: 40%; margin-top: 10%; margin-left: 10%"
               src="../../static/2.png"
               fit="fill"
             ></el-image
@@ -121,7 +121,7 @@ export default {
           },
         ],
         legend: {
-          top: "250px",
+          top: "15px",
         },
         itemStyle: {
           normal: {
@@ -160,7 +160,7 @@ export default {
           },
         ],
         legend: {
-          top: "250px",
+          top: "15px",
         },
         itemStyle: {
           normal: {
@@ -176,20 +176,15 @@ export default {
 };
 </script>
 <style scoped>
+.deviceAmount{
+  margin-bottom: 16%;
+}
 .pic {
   font-family: cursive;
   font-size: 22px;
-  
-  width: 800px;
+  width: 76%;
   height: 280px;
-  
   font-family: cursive;
-}
-#chartOne {
-  margin-top: -10%;
-}
-#chartTwo {
-  margin-top: -10%;
 }
 .title {
   background-color: #2e324c !important;
@@ -199,12 +194,12 @@ export default {
   font-family: cursive;
   font-size: 22px;
   margin-top: 7%;
-  width: 800px;
-  margin-top: 5%;
-  height: 400px;
+  width: 76%;
+  margin-top: 1%;
+  height: 327px;
   top: 60%;
-  
   font-family: cursive;
+  background-color: white;
 }
 </style>
 
