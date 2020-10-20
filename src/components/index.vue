@@ -9,7 +9,7 @@
 </template>
 <script>
 import navheader from "./header";
-import physicalDevice from "./resource-provider/physical-device";
+ import physicalDevice from "./resource-provider/physical-device";
 import sidebar from "./resource-provider/sidebar";
 export default {
   components:{

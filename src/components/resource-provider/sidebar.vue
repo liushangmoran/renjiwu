@@ -1,6 +1,6 @@
 <template>
   <!-- sidebar -->
-  <div style="width: 100%; height: 800px;marg" class="side">
+  <div style="width: 100%; height: 720px;" class="side">
     <div class="title">
       资源提供者
       <i class="el-icon-circle-plus-outline"></i>
@@ -72,7 +72,7 @@ ul {
 {
   margin-top: 8%;
   height: 280px;
-  margin-left: 20%;
+  margin-left: 10%;
   font-family: cursive;
 }
 </style>
