@@ -4,7 +4,7 @@
     <el-row>
       <el-col :span="3" :offset="3">
         <el-image
-          style="width: 60%;height: 60%;"
+          style="width: 75%;"
           src="../../static/logo.png"
           fit="fill"
         ></el-image>
@@ -21,7 +21,7 @@
     <el-row style="border-bottom:1px solid rgb(230, 230, 230)">
       <el-col :span="12" :offset="4">
           <el-menu
-            :default-active="activeIndex"
+          :default-active="index"
             class="el-menu-demo"
             mode="horizontal"
             @select="handleSelect"
@@ -56,6 +56,7 @@
 </template>
 <script>
 export default {
+  props:['index'],
   data() {
     return {
       activeIndex: "1",

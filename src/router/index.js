@@ -9,12 +9,13 @@ import dataView from '@/components/resource-league/data-view'
 import PhysicalDevice from '@/components/resource-provider/physical-device'
 import Index from '@/components/index'
 import Usage from '@/components/resource-usage/usage'
-import Resource from '@/components/resource-usage/resource'
 import Login from '@/components/resource-league/login'
+import Resource from '@/components/resource-usage/resource'
 // import { component } from 'vue/types/umd'
 Vue.use(Router)
 
 export default new Router({
+  mode: 'history',
   routes: [
     {
       path: '/index',
@@ -24,7 +25,7 @@ export default new Router({
     {
       path: '/usage',
       name: 'Usage',
-      component: Usage
+      component: Usage,
     },
     {
       path: '/resource',

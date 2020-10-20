@@ -21,24 +21,31 @@
           class="deviceAmount"
           :style="{ width: '100%', height: '98px', background: 'white' }"
         >
-          <el-col
+          <el-col :span="12"
             ><el-image
-              style="width: 50%; height: 40%; margin-top: 10%; margin-left: 10%"
+              class="img"
               src="../../static/1.png"
               fit="fill"
-            ></el-image
-            >6
+            ></el-image>
+          </el-col>
+          <el-col :span="12">
+            <div style="float: left; margin-top: 35%; margin-left: 25%">6</div>
           </el-col>
         </el-row>
         <el-row class="title">设备位置</el-row>
-        <el-row class="deviceArea" :style="{ width: '100%', height: '98px', background: 'white' }">
-          <el-col
+        <el-row
+          class="deviceArea"
+          :style="{ width: '100%', height: '98px', background: 'white' }"
+        >
+          <el-col :span="12"
             ><el-image
-              style="width: 50%; height: 40%; margin-top: 10%; margin-left: 10%"
+              class="img"
               src="../../static/2.png"
               fit="fill"
-            ></el-image
-            >6
+            ></el-image>
+          </el-col>
+          <el-col :span="12">
+            <div style="float: left; margin-top: 35%; margin-left: 25%">6</div>
           </el-col>
         </el-row>
       </el-col>
@@ -56,7 +63,6 @@
 </template>
 <script >
 export default {
- 
   data() {
     return {
       activeIndex: "1",
@@ -176,7 +182,12 @@ export default {
 };
 </script>
 <style scoped>
-.deviceAmount{
+.img {
+  width: 70%;
+  margin-top: 12%;
+  margin-left: 50%;
+}
+.deviceAmount {
   margin-bottom: 16%;
 }
 .pic {
