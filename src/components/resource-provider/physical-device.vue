@@ -1,21 +1,21 @@
 <template>
   <div style="flat">
     <el-row class="pic">
-      <el-col span="9">
+      <el-col :span="9">
         <el-row class="title">设备类型</el-row>
         <el-row
           id="chartOne"
           :style="{ width: '100%', height: '300px' }"
         ></el-row>
       </el-col>
-      <el-col span="9" offset="1">
+      <el-col :span="9" :offset="1">
         <el-row class="title">设备品牌</el-row>
         <el-row
           id="chartTwo"
           :style="{ width: '100%', height: '300px' }"
         ></el-row>
       </el-col>
-      <el-col span="4" offset="1">
+      <el-col :span="4" :offset="1">
         <el-row class="title">设备数量</el-row>
         <el-row
           class="deviceAmount"
@@ -55,13 +55,8 @@
   </div>
 </template>
 <script >
-import head from "../head";
-import sidebar from "./sidebar";
 export default {
-  components: {
-    head,
-    sidebar,
-  },
+ 
   data() {
     return {
       activeIndex: "1",
@@ -184,11 +179,10 @@ export default {
 .pic {
   font-family: cursive;
   font-size: 22px;
-  margin-top: 7%;
+  margin-top: 2%;
   width: 800px;
   height: 280px;
-  top: 50%;
-  left: 16%;
+  left: 11%;
   font-family: cursive;
 }
 #chartOne {

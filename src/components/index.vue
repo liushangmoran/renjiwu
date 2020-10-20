@@ -1,13 +1,11 @@
 <template>
-  <el-container style="height:100%">
-      <sidebar></sidebar>
-      <el-container direction="vertical">
-        <navheader></navheader>
-        <el-main>
-         <physicalDevice></physicalDevice>
-        </el-main>
-      </el-container>
-    </el-container>
+  <el-container>
+  <el-header style="height:auto"><navheader></navheader></el-header>
+  <el-container>
+    <el-aside ><sidebar style="width: 180px;"></sidebar></el-aside>
+    <el-main class="elMain"><physicalDevice></physicalDevice></el-main>
+  </el-container>
+</el-container>
 </template>
 <script>
 import navheader from "./header";
@@ -25,6 +23,11 @@ export default {
 <style>
   body{
     margin: 0px;
+  }
+  .elMain{
+  width: 800px;
+  height: 800px;
+  left: 11%;
   }
 </style>
 

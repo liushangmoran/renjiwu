@@ -1,6 +1,6 @@
 <template>
   <!-- sidebar -->
-  <div style="width: 10%; height: 800px;marg">
+  <div style="width: 100%; height: 800px;marg" class="side">
     <div class="title">
       资源提供者
       <i class="el-icon-circle-plus-outline"></i>
@@ -8,8 +8,6 @@
     <el-menu
       default-active="1"
       class="el-menu-vertical-demo"
-      @open="handleOpen"
-      @close="handleClose"
       background-color="#2e324c"
       text-color="#fff"
       active-text-color="#ffd04b"
@@ -69,6 +67,13 @@ ul {
     margin-left: 15%;
     line-height: 56px;
     position:absolute;
+}
+.side
+{
+  margin-top: 8%;
+  height: 280px;
+  margin-left: 20%;
+  font-family: cursive;
 }
 </style>
 <script>
