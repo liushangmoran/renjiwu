@@ -5,24 +5,24 @@
       资源联盟
     </div>
     <el-menu
-      default-active="/login"
+      :default-active="index"
       class="el-menu-vertical-demo"
       background-color="#2e324c"
       text-color="#fff"
       active-text-color="#ffd04b"
       router="true"
     >
-      <el-menu-item style="padding-left:0%" index="/login">
+      <el-menu-item style="padding-left:0%" index="1" @mouseover.native="mouseOver1">
         <div>
           <span>数据视角</span>
           <i class="el-icon-arrow-right"></i>
         </div>
       </el-menu-item>
-      <el-menu-item style="padding-left:0%" index="">
+      <el-menu-item style="padding-left:0%" index="2">
           <span>运维视角</span>
           <i class="el-icon-arrow-right"></i>
       </el-menu-item>
-      <el-menu-item style="padding-left:0%" index="">
+      <el-menu-item style="padding-left:0%" index="3">
         <span>应用视觉</span>
         <i class="el-icon-arrow-right"></i>
       </el-menu-item>
@@ -62,13 +62,20 @@ ul {
 export default {
   data() {
     return {
-      activeIndex: "1",
-      activeIndex2: "1",
+      // activeIndex: "1",
+      // activeIndex2: "1",
+      index:"1"
     };
   },
   methods: {
     handleSelect(key, keyPath) {
       console.log(key, keyPath);
+    },
+    mouseOver1:function()
+    {
+      this.index = 1;
+      // document.getElementById("menu1").setAttribute('font-size','100px');
+      this.$router.push({path:'/third'});
     },
   },
 };

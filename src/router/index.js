@@ -12,32 +12,64 @@ import Usage from '@/components/resource-usage/usage'
 import Login from '@/components/resource-league/login'
 import Resource from '@/components/resource-usage/resource'
 import League from '@/components/resource-league/league'
+import Physical from '@/components/resource-provider/physical'
+import Allview from '@/components/allview'
+import SideBar1 from '@/components/resource-usage/sidebar'
+import SideBar2 from '@/components/resource-league/sidebar'
 // import { component } from 'vue/types/umd'
 Vue.use(Router)
 
 export default new Router({
   mode: 'history',
   routes: [
+   
     {
-      path: '/index',
-      name: 'Index',
-      component: Index
+      path: '/first',
+      redirect:'first',
+      component:Allview,
+      name:'',
+      children:[
+        {
+          path:'/',
+          components:{
+            default:SideBar,
+            content:PhysicalDevice
+          },
+          matchAs:2
+        }
+      ]
     },
     {
-      path: '/usage',
-      name: 'Usage',
-      component: Usage,
+      path: '/second',
+      redirect:'second',
+      component:Allview,
+      name:'',
+      children:[
+        {
+          path:'/',
+          components:{
+            default:SideBar1,
+            content:ResourceService
+          },
+          matchAs:2
+        }
+      ]
     },
     {
-      path: '/resource',
-      name: 'Resource',
-      component: Resource
-    },
-    {
-      path: '/login',
-      name: 'Login',
-      name: 'login',
-      component: Login
+      path: '/third',
+      redirect:'third',
+      component:Allview,
+      name:'',
+      children:[
+        {
+          path:'/',
+          components:{
+            default:SideBar2,
+            content:dataView
+          },
+          matchAs:2
+        }
+      ]
     },
     {
       path: '/resource-service',
@@ -55,26 +87,32 @@ export default new Router({
     {
       path: '/application-service',
       redirect:'ApplicationService',
-      component:Resource,
+      component:Allview,
       name:'',
       children:[
         {
           path:'/',
-          component:ApplicationService,
-          matchAs:1
+          components:{
+            default:SideBar1,
+            content:ApplicationService,
+          },
+          matchAs:2
         }
       ]
     },
     {
       path: '/best-practice',
       redirect:'best-practice',
-      component:Resource,
+      component:Allview,
       name:'',
       children:[
         {
           path:'/',
-          component:BestPractice,
-          matchAs:1
+          components:{
+            default:SideBar1,
+            content:BestPractice,
+          },
+          matchAs:2
         }
       ]
     },
@@ -87,6 +125,19 @@ export default new Router({
         {
           path:'/',
           component:League,
+          matchAs:1
+        }
+      ]
+    },
+    {
+      path: '/physical',
+      redirect:'physical',
+      component:Index,
+      name:'',
+      children:[
+        {
+          path:'/',
+          component:Physical,
           matchAs:1
         }
       ]

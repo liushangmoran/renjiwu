@@ -6,41 +6,41 @@
       <i class="el-icon-circle-plus-outline"></i>
     </div>
     <el-menu
-      default-active="/index"
+      :default-active="index"
       class="el-menu-vertical-demo"
       background-color="#2e324c"
       text-color="#fff"
       active-text-color="#ffd04b"
       router
     >
-      <el-menu-item style="padding-left:0%" index="">
+      <el-menu-item style="padding-left:0%" index="1">
         <div>
           <span>计算资源</span>
           <i class="el-icon-arrow-right"></i>
         </div>
         
       </el-menu-item>
-      <el-menu-item style="padding-left:0%" index="">
+      <el-menu-item style="padding-left:0%" index="2">
           <span>存储资源</span>
           <i class="el-icon-arrow-right"></i>
       </el-menu-item>
-      <el-menu-item style="padding-left:0%" index="">
+      <el-menu-item style="padding-left:0%" index="3">
         <span>网络资源</span>
         <i class="el-icon-arrow-right"></i>
       </el-menu-item>
-      <el-menu-item style="padding-left:0%" index="">
+      <el-menu-item style="padding-left:0%" index="4">
         <span>数据资源</span>
         <i class="el-icon-arrow-right"></i>
       </el-menu-item>
-      <el-menu-item style="padding-left:0%" index="">
+      <el-menu-item style="padding-left:0%" index="5">
         <span>服务资源</span>
         <i class="el-icon-arrow-right"></i>
       </el-menu-item>
-      <el-menu-item style="padding-left:0%" index="">
+      <el-menu-item style="padding-left:0%" index="6">
         <span>人力资源</span>
         <i class="el-icon-arrow-right"></i>
       </el-menu-item>
-      <el-menu-item style="padding-left:0%" index="/index">
+      <el-menu-item style="padding-left:0%" index="7" >
         <span>物理设备资源</span>
         <i class="el-icon-arrow-right"></i>
       </el-menu-item>
@@ -83,6 +83,7 @@ export default {
     return {
       activeIndex: "1",
       activeIndex2: "1",
+      index:"7"
     };
   },
   methods: {

@@ -95,7 +95,7 @@ export default {
 }
 .panel{
   background-color:#F8F8FA !important;
-    height: 608px;
+    height: 88%;
     width: 76%;
     box-shadow: 0px 0px 10px #F8F8FA;
 }

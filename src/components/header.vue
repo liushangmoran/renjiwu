@@ -28,11 +28,10 @@
             mode="horizontal"
             @select="handleSelect"
             style="border-bottom: none"
-            router 
- >
-            <el-menu-item index="/index" style="color:#2e324c" @mouseover.native="mouseOver1">资源提供者</el-menu-item>
-            <el-menu-item index="/resource-service" style="color:#2e324c" @mouseenter.native="mouseOver2">资源使用者/应用开发者</el-menu-item>
-            <el-menu-item index="/login" style="color:#2e324c" @mouseover.native="mouseOver3">资源联盟</el-menu-item>
+            router >
+            <el-menu-item index="1" style="color:#2E324C;" @mouseover.native="mouseOver1">资源提供者</el-menu-item>
+            <el-menu-item index="2" style="color:#2e324c;" @mouseenter.native="mouseOver2">资源使用者/应用开发者</el-menu-item>
+            <el-menu-item index="3" style="color:#2e324c;" @mouseover.native="mouseOver3">资源联盟</el-menu-item>
           </el-menu>
           <!-- <div class="line"></div> -->
      
@@ -63,6 +62,7 @@ export default {
       activeIndex: "1",
       activeIndex2: "1",
       input: "",
+      index:"1"
     };
   },
   methods: {
@@ -70,13 +70,16 @@ export default {
       console.log(key, keyPath);
     },
     mouseOver1:function(){
-      this.$router.push({path:'/index'});
+      this.index=1;
+      this.$router.push({path:'/first'});
     },
     mouseOver2(){
-      this.$router.push({path:'/resource-service'});
+      this.index=2;
+      this.$router.push({path:'/second'});
     },
     mouseOver3:function(){
-      this.$router.push({path:'/login'});
+      this.index=3;
+      this.$router.push({path:'/third'});
     },
   },
 };
@@ -86,9 +89,14 @@ export default {
 .el-menu-item{
   padding:0 40px !important
 }
+
 </style>
 <style>
+.el-menu--horizontal>.el-menu-item.is-active{
+  border-bottom: 2px solid #2e324c;
+}
 .el-input-group__append{
   background-color: #2e324c !important;
 }
+
 </style>

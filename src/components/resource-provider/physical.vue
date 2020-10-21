@@ -4,15 +4,14 @@
   <el-header><navHead></navHead></el-header>
   <el-container>
     <el-aside width="200px"></el-aside>
-    <el-main><physicalDevice></physicalDevice></el-main>
+    <el-main><router-view></router-view></el-main>
   </el-container>
 </el-container> 
 
   </div>
 </template>
 <script>
-import navHead from "../head";
-import physicalDevice from "./physical-device";
+import navHead from "../header";
 import sidebar from "./sidebar";
 export default {
   data() {
@@ -24,7 +23,6 @@ export default {
   },
   components: {
     navHead,
-    physicalDevice,
     sidebar
   },
   methods: {
