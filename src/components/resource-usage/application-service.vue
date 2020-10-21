@@ -5,7 +5,7 @@
         style="height: 30px；width:50%"
         placeholder="请输入搜索内容"
         prefix-icon="el-icon-search"
-        v-model="input"
+        
       >
       </el-input>
     </el-row>

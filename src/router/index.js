@@ -11,6 +11,7 @@ import Index from '@/components/index'
 import Usage from '@/components/resource-usage/usage'
 import Login from '@/components/resource-league/login'
 import Resource from '@/components/resource-usage/resource'
+import League from '@/components/resource-league/league'
 // import { component } from 'vue/types/umd'
 Vue.use(Router)
 
@@ -34,7 +35,6 @@ export default new Router({
     },
     {
       path: '/login',
-
       name: 'Login',
       name: 'login',
       component: Login
@@ -74,6 +74,19 @@ export default new Router({
         {
           path:'/',
           component:BestPractice,
+          matchAs:1
+        }
+      ]
+    },
+    {
+      path: '/league',
+      redirect:'league',
+      component:Login,
+      name:'',
+      children:[
+        {
+          path:'/',
+          component:League,
           matchAs:1
         }
       ]

@@ -18,20 +18,21 @@
         </h1>
       </el-col>
     </el-row>
+        
     <el-row style="border-bottom:1px solid rgb(230, 230, 230)">
       <el-col :span="12" :offset="4">
+    
           <el-menu
           :default-active="index"
             class="el-menu-demo"
             mode="horizontal"
             @select="handleSelect"
             style="border-bottom: none"
-            router
+            router 
  >
-            <el-menu-item index="/index" style="color:#2e324c">资源提供者</el-menu-item>
-            <el-menu-item index="/resource-service" style="color:#2e324c">资源使用者/应用开发者</el-menu-item>
-            <el-menu-item index="/login" style="color:#2e324c">资源联盟</el-menu-item>
- 
+            <el-menu-item index="/index" style="color:#2e324c" @mouseover.native="mouseOver1">资源提供者</el-menu-item>
+            <el-menu-item index="/resource-service" style="color:#2e324c" @mouseenter.native="mouseOver2">资源使用者/应用开发者</el-menu-item>
+            <el-menu-item index="/login" style="color:#2e324c" @mouseover.native="mouseOver3">资源联盟</el-menu-item>
           </el-menu>
           <!-- <div class="line"></div> -->
      
@@ -68,7 +69,15 @@ export default {
     handleSelect(key, keyPath) {
       console.log(key, keyPath);
     },
-    
+    mouseOver1:function(){
+      this.$router.push({path:'/index'});
+    },
+    mouseOver2(){
+      this.$router.push({path:'/resource-service'});
+    },
+    mouseOver3:function(){
+      this.$router.push({path:'/login'});
+    },
   },
 };
 </script>

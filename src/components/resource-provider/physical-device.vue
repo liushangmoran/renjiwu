@@ -43,15 +43,15 @@
         </el-row>
       </el-col>
     </el-row>
-    <el-row class="chart">
-      <el-table :data="tableData" style="width: 100%">
-        <el-table-column prop="name" label="设备名称" width="180">
+    <el-row class="chart" >
+      <el-table :data="tableData" height="328"  style="width: 100%" >
+        <el-table-column  prop="name" label="设备名称" width="180">
         </el-table-column>
         <el-table-column prop="handle" label="DO Handle" width="180">
         </el-table-column>
-        <el-table-column prop="type" label="设备类型"> </el-table-column>
-        <el-table-column prop="address" label="设备位置"> </el-table-column>
-        <el-table-column prop="brand" label="品牌"> </el-table-column>
+        <el-table-column  prop="type" label="设备类型" > </el-table-column>
+        <el-table-column  prop="address" label="设备位置" > </el-table-column>
+        <el-table-column  prop="brand" label="品牌" > </el-table-column>
       </el-table>
     </el-row>
   </div>
@@ -80,25 +80,32 @@ export default {
           brand:'海尔',
         },
         {
-          name: "Life-sense Weight",
-          handle: "86.5000.470/do.hw2k2Lopxw",
-          type: "体重秤",
+          name: "MI Air Purifier",
+          handle: "86.5000.470/do.TQFnzOumvM",
+          type: "空气净化器",
           address:'燕园大夏813',
-          brand:'乐心',
+          brand:'小米',
         },
         {
-          name: "Life-sense Weight",
-          handle: "86.5000.470/do.hw2k2Lopxw",
-          type: "体重秤",
+          name: "MI PM2.5 Detector",
+          handle: "86.5000.470/do.jNqym6tnyW",
+          type: "空气质量检测仪",
           address:'燕园大夏813',
-          brand:'乐心',
+          brand:'小米',
         },
         {
-          name: "Life-sense Weight",
-          handle: "86.5000.470/do.hw2k2Lopxw",
-          type: "体重秤",
+          name: "American Tank",
+          handle: "86.5000.470/do.OHr9ZYl2ji",
+          type: "扫地机器人",
           address:'燕园大夏813',
-          brand:'乐心',
+          brand:'iRobot',
+        },
+        {
+          name: "Smal Kettle",
+          handle: "86.5000.470/do.YfdaMFETRd",
+          type: "热水壶",
+          address:'燕园大夏813',
+          brand:'西摩',
         },
       ],
     };
@@ -118,7 +125,8 @@ export default {
           {
             name: "访问来源",
             type: "pie",
-            radius: "40%",
+            radius: '30%',
+            center: ['50%', '60%'],
             data: [
              { value: 2, name: "空气质量检测仪" },
               { value: 1, name: "体重秤" },
@@ -130,7 +138,7 @@ export default {
               normal: {
                 label: {
                   show: true,
-                  formatter: "{b} : \n{c} ({d}%)",
+                  formatter: "{b}:\n{c}({d}%)",
                 },
                 labelLine: { show: true },
               },
@@ -138,7 +146,7 @@ export default {
           },
         ],
         legend: {
-          top: "15px",
+          top: "1px",
         },
         itemStyle: {
           normal: {
@@ -158,6 +166,7 @@ export default {
             name: "访问来源",
             type: "pie",
             radius: "40%",
+             center: ['50%', '60%'],
             data: [
               
               { value: 2, name: "小米" },
@@ -178,7 +187,7 @@ export default {
           },
         ],
         legend: {
-          top: "15px",
+          top: "1px",
         },
         itemStyle: {
           normal: {
@@ -194,6 +203,15 @@ export default {
 };
 </script>
 <style scoped>
+.el-table{
+  font-size: 11px;
+  color: #2e324c !important;
+}
+.has-gutter
+{
+ font-size: 11px !important;
+  color: #2e324c !important;
+}
 .deviceAmount{
   margin-bottom: 16%;
 }
@@ -219,6 +237,10 @@ export default {
   font-family: cursive;
   background-color: white;
   margin-bottom: 0px;
+ 
+}
+.col{
+  font-size:8px;
 }
 </style>
 

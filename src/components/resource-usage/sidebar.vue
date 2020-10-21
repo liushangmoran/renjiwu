@@ -12,17 +12,17 @@
       active-text-color="#ffd04b"
       router
     >
-      <el-menu-item style="padding-left:0%" index="/resource-service">
+      <el-menu-item style="padding-left:0%" index="/resource-service" @mouseover.native="mouseOver1">
         <div>
           <span>资源服务</span>
           <i class="el-icon-arrow-right"></i>
         </div>
       </el-menu-item>
-      <el-menu-item style="padding-left:0%" index="/application-service">
+      <el-menu-item style="padding-left:0%" index="/application-service" @mouseover.native="mouseOver2">
           <span>应用服务</span>
           <i class="el-icon-arrow-right"></i>
       </el-menu-item>
-      <el-menu-item style="padding-left:0%" index="/best-practice">
+      <el-menu-item style="padding-left:0%" index="/best-practice" @mouseover.native="mouseOver3">
         <span>最佳实践</span>
         <i class="el-icon-arrow-right"></i>
       </el-menu-item>
@@ -69,6 +69,18 @@ export default {
   methods: {
     handleSelect(key, keyPath) {
       console.log(key, keyPath);
+    },
+    mouseOver1:function()
+    {
+      this.$router.push({path:'/resource-service'});
+    },
+    mouseOver2:function()
+    {
+      this.$router.push({path:'/application-service'});
+    },
+    mouseOver3:function()
+    {
+      this.$router.push({path:'/best-practice'});
     },
   },
 };

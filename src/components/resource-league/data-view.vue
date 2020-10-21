@@ -82,7 +82,7 @@ export default {
   border-radius: 4px;
   background-color: #ddd0d096 !important;
   opacity: 0.9;
-  box-shadow: 0px 0px 10px #ddd0d096;
+  box-shadow: 0px 0px 15px #ddd0d096;
 }
 .el-button--primary {
   color: #fff;
@@ -94,8 +94,9 @@ export default {
   width: 100%;
 }
 .panel{
-  background-color:#f0f0f3;
+  background-color:#F8F8FA !important;
     height: 608px;
     width: 76%;
+    box-shadow: 0px 0px 10px #F8F8FA;
 }
 </style>
