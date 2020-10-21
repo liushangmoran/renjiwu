@@ -21,48 +21,44 @@
           class="deviceAmount"
           :style="{ width: '100%', height: '98px', background: 'white' }"
         >
-          <el-col :span="12"
+          <el-col
             ><el-image
-              class="img"
+              style="width: 50%; height: 40%; margin-top: 10%; margin-left: 10%"
               src="../../static/1.png"
               fit="fill"
-            ></el-image>
-          </el-col>
-          <el-col :span="12">
-            <div style="float: left; margin-top: 35%; margin-left: 25%">6</div>
+            ></el-image
+            >6
           </el-col>
         </el-row>
         <el-row class="title">设备位置</el-row>
-        <el-row
-          class="deviceArea"
-          :style="{ width: '100%', height: '98px', background: 'white' }"
-        >
-          <el-col :span="12"
+        <el-row class="deviceArea" :style="{ width: '100%', height: '98px', background: 'white' }">
+          <el-col
             ><el-image
-              class="img"
+              style="width: 50%; height: 40%; margin-top: 10%; margin-left: 10%"
               src="../../static/2.png"
               fit="fill"
-            ></el-image>
-          </el-col>
-          <el-col :span="12">
-            <div style="float: left; margin-top: 35%; margin-left: 25%">6</div>
+            ></el-image
+            >6
           </el-col>
         </el-row>
       </el-col>
     </el-row>
     <el-row class="chart">
       <el-table :data="tableData" style="width: 100%">
-        <el-table-column prop="date" label="日期" width="180">
+        <el-table-column prop="name" label="设备名称" width="180">
         </el-table-column>
-        <el-table-column prop="name" label="姓名" width="180">
+        <el-table-column prop="handle" label="DO Handle" width="180">
         </el-table-column>
-        <el-table-column prop="address" label="地址"> </el-table-column>
+        <el-table-column prop="type" label="设备类型"> </el-table-column>
+        <el-table-column prop="address" label="设备位置"> </el-table-column>
+        <el-table-column prop="brand" label="品牌"> </el-table-column>
       </el-table>
     </el-row>
   </div>
 </template>
 <script >
 export default {
+ 
   data() {
     return {
       activeIndex: "1",
@@ -70,24 +66,39 @@ export default {
       input: "",
       tableData: [
         {
-          date: "2016-05-02",
-          name: "王小虎",
-          address: "上海市普陀区金沙江路 1518 弄",
+          name: "Life-sense Weight",
+          handle: "86.5000.470/do.hw2k2Lopxw",
+          type: "体重秤",
+          address:'燕园大夏813',
+          brand:'乐心',
         },
         {
-          date: "2016-05-04",
-          name: "王小虎",
-          address: "上海市普陀区金沙江路 1517 弄",
+          name: "Haier Air Box",
+          handle: "86.5000.470/do.f6gvjwg7lf",
+          type: "空气质量检测仪",
+          address:'燕园大夏813',
+          brand:'海尔',
         },
         {
-          date: "2016-05-01",
-          name: "王小虎",
-          address: "上海市普陀区金沙江路 1519 弄",
+          name: "Life-sense Weight",
+          handle: "86.5000.470/do.hw2k2Lopxw",
+          type: "体重秤",
+          address:'燕园大夏813',
+          brand:'乐心',
         },
         {
-          date: "2016-05-03",
-          name: "王小虎",
-          address: "上海市普陀区金沙江路 1516 弄",
+          name: "Life-sense Weight",
+          handle: "86.5000.470/do.hw2k2Lopxw",
+          type: "体重秤",
+          address:'燕园大夏813',
+          brand:'乐心',
+        },
+        {
+          name: "Life-sense Weight",
+          handle: "86.5000.470/do.hw2k2Lopxw",
+          type: "体重秤",
+          address:'燕园大夏813',
+          brand:'乐心',
         },
       ],
     };
@@ -109,11 +120,11 @@ export default {
             type: "pie",
             radius: "40%",
             data: [
-              { value: 2, name: "视频广告" },
-              { value: 2, name: "联盟广告" },
-              { value: 3, name: "邮件营销" },
-              { value: 3, name: "直接访问" },
-              { value: 4, name: "搜索引擎" },
+             { value: 2, name: "空气质量检测仪" },
+              { value: 1, name: "体重秤" },
+              { value: 1, name: "空气净化器" },
+              { value: 1, name: "扫地机器人" },
+              { value: 1, name: "热水壶" },
             ],
             itemStyle: {
               normal: {
@@ -148,11 +159,12 @@ export default {
             type: "pie",
             radius: "40%",
             data: [
-              { value: 2, name: "视频广告" },
-              { value: 2, name: "联盟广告" },
-              { value: 3, name: "邮件营销" },
-              { value: 3, name: "直接访问" },
-              { value: 4, name: "搜索引擎" },
+              
+              { value: 2, name: "小米" },
+              { value: 1, name: "乐心" },
+              { value: 1, name: "海尔" },
+              { value: 1, name: "iRobot" },
+              { value: 1, name: "西摩" },
             ],
             itemStyle: {
               normal: {
@@ -182,12 +194,7 @@ export default {
 };
 </script>
 <style scoped>
-.img {
-  width: 70%;
-  margin-top: 12%;
-  margin-left: 50%;
-}
-.deviceAmount {
+.deviceAmount{
   margin-bottom: 16%;
 }
 .pic {

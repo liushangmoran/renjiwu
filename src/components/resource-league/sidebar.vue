@@ -5,24 +5,24 @@
       资源联盟
     </div>
     <el-menu
-      default-active="1"
+      default-active="/login"
       class="el-menu-vertical-demo"
       background-color="#2e324c"
       text-color="#fff"
       active-text-color="#ffd04b"
       router="true"
     >
-      <el-menu-item style="padding-left:0%" index="/resource-service">
+      <el-menu-item style="padding-left:0%" index="/login">
         <div>
           <span>数据视角</span>
           <i class="el-icon-arrow-right"></i>
         </div>
       </el-menu-item>
-      <el-menu-item style="padding-left:0%" index="/application-service">
+      <el-menu-item style="padding-left:0%" index="">
           <span>运维视角</span>
           <i class="el-icon-arrow-right"></i>
       </el-menu-item>
-      <el-menu-item style="padding-left:0%" index="/application-service">
+      <el-menu-item style="padding-left:0%" index="">
         <span>应用视觉</span>
         <i class="el-icon-arrow-right"></i>
       </el-menu-item>
