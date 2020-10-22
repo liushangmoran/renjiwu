@@ -6,6 +6,7 @@
         placeholder="请输入搜索内容"
         prefix-icon="el-icon-search"
         v-model="searchValue"
+         @input="queryData"
       >
       </el-input>
     </el-row>
@@ -13,12 +14,7 @@
       <el-col :span="5"
         >
         <div class="mydiv">开发服务<hr>
-          <div class="items">集成开发环境</div>
-          <div class="items">代码分析</div>
-          <div class="items">项目管理</div>
-          <div class="items">应用建模</div>
-          <div class="items">项目协作服务</div>
-          <div class="items">知识库服务</div>
+        <div class="items" v-for="(item,index) in developService" :key="index">{{item}}</div>
         </div>
         
         </el-col
@@ -26,11 +22,7 @@
       <el-col :span="5"
         >
         <div class="mydiv">运维服务<hr>
-          <div class="items">日志服务</div>
-          <div class="items">性能分析</div>
-          <div class="items">监控服务</div>
-          <div class="items">安全管理</div>
-          <div class="items">访问控制</div>
+        <div class="items" v-for="(item,index) in operateService" :key="index">{{item}}</div>
         </div>
         </el-col
       >
@@ -80,14 +72,34 @@ export default {
     return {
       activeIndex: "1",
       activeIndex2: "1",
-      searchValue: ""
+      searchValue: "",
+      developService:['集成开发环境','代码分析','项目管理','应用建模','项目协作服务','知识库服务'],
+      operateService:['日志服务','性能分析','监控服务','安全管理','访问控制'],
+
+      developService1:['集成开发环境','代码分析','项目管理','应用建模','项目协作服务','知识库服务'],
+      operateService1:['日志服务','性能分析','监控服务','安全管理','访问控制'],
     };
   },
   methods: {
     handleSelect(key, keyPath) {
       console.log(key, keyPath);
     },
-   
+   queryData(){
+                    //并没有输入关键字时，就不要再搜索了
+                    if(this.searchValue===''||this.searchValue==null){
+                        this.developService=JSON.parse(JSON.stringify(this.developService1));
+                        this.operateService=JSON.parse(JSON.stringify(this.operateService1));
+                        return;
+                    }
+                    //搜索
+                    let list=this.developService1.filter(item=>item.indexOf(this.searchValue)>=0);
+                    this.developService=list;
+
+                    let list1=this.operateService1.filter(item=>item.indexOf(this.searchValue)>=0);
+                    this.operateService=list1;
+
+                    
+  }
   },
 };
 </script>

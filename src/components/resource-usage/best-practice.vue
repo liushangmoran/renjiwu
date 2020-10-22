@@ -6,17 +6,14 @@
         placeholder="请输入搜索内容"
         prefix-icon="el-icon-search"
         v-model="searchValue"
+        @input="queryData"
       >
       </el-input>
     </el-row>
     <el-row>
       <el-col :span="5">
         <div class="myDiv">
-          <div class="items">智慧城市</div>
-          <div class="items">数据检索</div>
-          <div class="items">电子政务</div>
-          <div class="items">智能家居</div>
-          <div class="items">更多</div>
+          <div class="items" v-for="(item,index) in bestService" :key="index">{{item}}</div>
         </div>
         </el-col>
     </el-row>
@@ -65,13 +62,26 @@ export default {
     return {
       activeIndex: "1",
       activeIndex2: "1",
-      searchValue: ""
+      searchValue: "",
+      bestService:['智慧城市','数据检索','电子政务','智能家居','更多'],
+      bestService1:['智慧城市','数据检索','电子政务','智能家居','更多'],
     };
   },
   methods: {
     handleSelect(key, keyPath) {
       console.log(key, keyPath);
     },
+    queryData(){
+                    //并没有输入关键字时，就不要再搜索了
+                    if(this.searchValue===''||this.searchValue==null){
+                        this.bestService=JSON.parse(JSON.stringify(this.bestService1));
+                        return;
+                    }
+                    //搜索
+                    let list=this.bestService1.filter(item=>item.indexOf(this.searchValue)>=0);
+                    this.bestService=list;
+                    
+  }
   },
 };
 </script>
