@@ -6,7 +6,6 @@
         placeholder="请输入搜索内容"
         prefix-icon="el-icon-search"
         v-model="searchValue"
-       
       >
       </el-input>
     </el-row>

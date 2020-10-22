@@ -1,6 +1,6 @@
 <template>
   <!-- sidebar -->
-  <div style="width: 100%; height: 700px;" class="side">
+  <div style="width: 100%; height: 720px;" class="side">
     <div class="title">
       资源联盟
     </div>

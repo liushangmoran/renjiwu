@@ -70,8 +70,8 @@ export default {
   position: absolute;
   width: 800px;
   background-color: #f8f8fa !important;
-  margin-top: -20px;
-  margin-left: 4px;
+  margin-top: 0%;
+  margin-left: 0%;
   box-shadow: 0px 0px 5px #f8f8fa;
 }
 #user-login {
@@ -79,7 +79,7 @@ export default {
   position: absolute;
   padding: 20px 30px;
   margin-top: 10%;
-  left: 28%;
+  margin-left: 24%;
   width: 420px;
   border-radius: 4px;
   background-color: #ddd0d096 !important;
