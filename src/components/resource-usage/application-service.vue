@@ -6,6 +6,7 @@
         placeholder="请输入搜索内容"
         prefix-icon="el-icon-search"
         v-model="searchValue"
+       
       >
       </el-input>
     </el-row>
@@ -87,6 +88,7 @@ export default {
     handleSelect(key, keyPath) {
       console.log(key, keyPath);
     },
+   
   },
 };
 </script>
