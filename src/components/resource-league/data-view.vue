@@ -66,20 +66,18 @@ export default {
   font-size: 8px;
 }
 #content {
-  float: left;
+
   position: absolute;
   width: 800px;
   background-color: #f8f8fa !important;
-  margin-top: 0%;
-  margin-left: 0%;
+  margin: 0 auto;
   box-shadow: 0px 0px 5px #f8f8fa;
 }
 #user-login {
-  float: left;
-  position: absolute;
+  /* float: left;
+  position: absolute; */
   padding: 20px 30px;
-  margin-top: 10%;
-  margin-left: 24%;
+  margin: 10% auto;
   width: 420px;
   border-radius: 4px;
   background-color: #ddd0d096 !important;

@@ -6,6 +6,7 @@
         placeholder="请输入搜索内容"
         prefix-icon="el-icon-search"
         v-model="searchValue"
+        @input="queryData"
       >
        <!-- v-model="input" -->
       </el-input>
@@ -15,66 +16,43 @@
         ><div class="mydiv">
           计算资源
           <hr />
-          <div class="items">云服务器</div>
-          <div class="items">容器服务</div>
-          <div class="items">智能合约</div>
+          <div class="items" v-for="(item,index) in computeResource" :key="index">{{item}}</div>
         </div>
         <div class="mydiv">
           数据资源
           <hr />
-          <div class="items">外卖订单数据</div>
-          <div class="items">淘宝订单数据</div>
-          <div class="items">豆瓣歌单数据</div>
-          <div class="items">天气数据</div>
-          <div class="items">地图数据</div>
-          <div class="items">空气质量数据</div>
+          <div class="items" v-for="(item,index) in dataResource" :key="index">{{item}}</div>
         </div></el-col
       >
       <el-col :span="5"
         ><div class="mydiv">
           存储资源
           <hr />
-          <div class="items">数据库</div>
-          <div class="items">文件存储</div>
-          <div class="items">分布式账本</div>
+          <div class="items" v-for="(item,index) in storeResource" :key="index">{{item}}</div>
         </div>
         <div class="mydiv">
           服务资源
           <hr />
-          <div class="items">打车服务</div>
-          <div class="items">购票服务</div>
-          <div class="items">订座服务</div>
+           <div class="items" v-for="(item,index) in serviceResource" :key="index">{{item}}</div>
         </div></el-col
       >
       <el-col :span="5"
         ><div class="mydiv">
           人力资源
           <hr />
-          <div class="items">快递服务</div>
-          <div class="items">送餐服务</div>
-          <div class="items">保洁服务</div>
-          <div class="items">跑腿服务</div>
-          <div class="items">代办服务</div>
+          <div class="items" v-for="(item,index) in manpowerResource" :key="index">{{item}}</div>
         </div>
         <div class="mydiv">
           物理设备资源
           <hr />
-          <div class="items">空气净化器</div>
-          <div class="items">体重秤</div>
-          <div class="items">热水壶</div>
-          <div class="items">咖啡机</div>
+          <div class="items" v-for="(item,index) in deviceResource" :key="index">{{item}}</div>
         </div></el-col
       >
       <el-col :span="5"
         ><div class="mydiv">
           管理服务
           <hr/>
-          <div class="items">发现服务</div>
-          <div class="items">计费服务</div>
-          <div class="items">竞价服务</div>
-          <div class="items">监控服务</div>
-          <div class="items">安全管理</div>
-          <div class="items">访问控制</div>
+          <div class="items" v-for="(item,index) in manageResource" :key="index">{{item}}</div>
         </div></el-col
       >
     </el-row>
@@ -123,13 +101,21 @@ export default {
     return {
       activeIndex: "1",
       activeIndex2: "1",
-      searchValue: ""
+      searchValue: "",
+      computeResource:['云服务器','容器服务','智能合约'],
+      dataResource:['外卖订单数据','淘宝订单数据','豆瓣歌单数据','天气数据','地图数据','空气质量数据'],
+      storeResource:['数据库','文件存储','分布式账本'],
+      serviceResource:['打车服务','购票服务','订座服务'],
+      manpowerResource:['快递服务','送餐服务','保洁服务','跑腿服务','代办服务'],
+      deviceResource:['空气净化器','体重秤','热水壶','咖啡机'],
+      manageResource:['发现服务','计费服务','竞价服务','监控服务','安全管理','访问控制'],
     };
   },
+
   methods: {
     handleSelect(key, keyPath) {
       console.log(key, keyPath);
     },
-  },
+  }
 };
 </script>
