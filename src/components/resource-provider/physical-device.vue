@@ -47,7 +47,7 @@
             ></el-image
             >
             </el-col><el-col :span="8">
-              <div style="margin-top: 45%;margin-right: 90%;">6</div>
+              <div style="margin-top: 45%;margin-right: 90%;">3</div>
             </el-col>
           
         </el-row>
@@ -99,21 +99,21 @@ export default {
           name: "MI PM2.5 Detector",
           handle: "86.5000.470/do.jNqym6tnyW",
           type: "空气质量检测仪",
-          address: "燕园大夏813",
+          address: "燕园大夏818",
           brand: "小米",
         },
         {
           name: "American Tank",
           handle: "86.5000.470/do.OHr9ZYl2ji",
           type: "扫地机器人",
-          address: "燕园大夏813",
+          address: "燕园大夏818",
           brand: "iRobot",
         },
         {
           name: "Smal Kettle",
           handle: "86.5000.470/do.YfdaMFETRd",
           type: "热水壶",
-          address: "燕园大夏813",
+          address: "燕园大夏820",
           brand: "西摩",
         },
       ],
@@ -147,7 +147,7 @@ export default {
               normal: {
                 label: {
                   show: true,
-                  formatter: "{b}:\n{c}({d}%)",
+                  formatter: "设备类型\n{b}:\n{c}({d}%)",
                 },
                 labelLine: { show: true },
               },
@@ -187,7 +187,7 @@ export default {
               normal: {
                 label: {
                   show: true,
-                  formatter: "{b} : \n{c} ({d}%)",
+                  formatter: "设备品牌\n{b} : \n{c} ({d}%)",
                 },
                 labelLine: { show: true },
               },
