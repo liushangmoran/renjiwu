@@ -10,19 +10,19 @@
       background-color="#2e324c"
       text-color="#fff"
       active-text-color="#ffd04b"
-      router
+      router=true
     >
-      <el-menu-item id="menu1" style="padding-left:0%" index="1" @mouseover.native="mouseOver1">
+      <el-menu-item id="menu1" style="padding-left:0%" index="/second" @mouseover.native="mouseOver1">
         <div>
           <span>资源服务</span>
           <i class="el-icon-arrow-right"></i>
         </div>
       </el-menu-item>
-      <el-menu-item id="menu2" style="padding-left:0%" index="2"  @mouseover.native="mouseOver2">
+      <el-menu-item id="menu2" style="padding-left:0%" index="/application-service"  @mouseover.native="mouseOver2">
           <span>应用服务</span>
           <i class="el-icon-arrow-right"></i>
       </el-menu-item>
-      <el-menu-item id="menu3" style="padding-left:0%" index="3"  @mouseover.native="mouseOver3">
+      <el-menu-item id="menu3" style="padding-left:0%" index="/best-practice"  @mouseover.native="mouseOver3">
         <span>最佳实践</span>
         <i class="el-icon-arrow-right"></i>
       </el-menu-item>
@@ -62,9 +62,7 @@ ul {
 export default {
   data() {
     return {
-      // activeIndex: "1",
-      // activeIndex2: "1",
-      index: "1"
+      index: "/second"
     };
   },
   methods: {
@@ -73,18 +71,17 @@ export default {
     },
     mouseOver1:function()
     {
-      this.index = 1;
-      // document.getElementById("menu1").setAttribute('font-size','100px');
+      this.index = '/second';
       this.$router.push({path:'/second'});
     },
     mouseOver2:function()
     {
-      this.index = 2;
+      this.index = '/application-service';
       this.$router.push({path:'/application-service'});
     },
     mouseOver3:function()
     {
-      this.index = 3;
+      this.index = '/best-practice';
       this.$router.push({path:'/best-practice'});
     },
   },

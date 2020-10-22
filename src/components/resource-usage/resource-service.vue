@@ -5,6 +5,7 @@
         style="height: 30px；width:50%"
         placeholder="请输入搜索内容"
         prefix-icon="el-icon-search"
+        v-model="searchValue"
       >
        <!-- v-model="input" -->
       </el-input>
@@ -122,6 +123,7 @@ export default {
     return {
       activeIndex: "1",
       activeIndex2: "1",
+      searchValue: ""
     };
   },
   methods: {

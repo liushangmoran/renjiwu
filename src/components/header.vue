@@ -23,15 +23,15 @@
       <el-col :span="12" :offset="4">
     
           <el-menu
-          :default-active="index"
+          :default-active="activeIndex"
             class="el-menu-demo"
             mode="horizontal"
             @select="handleSelect"
             style="border-bottom: none"
-            router >
-            <el-menu-item index="1" style="color:#2E324C;" @mouseover.native="mouseOver1">资源提供者</el-menu-item>
-            <el-menu-item index="2" style="color:#2e324c;" @mouseenter.native="mouseOver2">资源使用者/应用开发者</el-menu-item>
-            <el-menu-item index="3" style="color:#2e324c;" @mouseover.native="mouseOver3">资源联盟</el-menu-item>
+            router=true >
+            <el-menu-item index="/first" style="color:#2E324C;" @mouseover.native="mouseOver1">资源提供者</el-menu-item>
+            <el-menu-item index="/second" style="color:#2e324c;" @mouseenter.native="mouseOver2">资源使用者/应用开发者</el-menu-item>
+            <el-menu-item index="/third" style="color:#2e324c;" @mouseover.native="mouseOver3">资源联盟</el-menu-item>
           </el-menu>
           <!-- <div class="line"></div> -->
      
@@ -59,10 +59,8 @@ export default {
   props:['index'],
   data() {
     return {
-      activeIndex: "1",
-      activeIndex2: "1",
+      activeIndex: "/first",
       input: "",
-      index:"1"
     };
   },
   methods: {
@@ -70,15 +68,15 @@ export default {
       console.log(key, keyPath);
     },
     mouseOver1:function(){
-      this.index=1;
+      this.activeIndex='/first';
       this.$router.push({path:'/first'});
     },
     mouseOver2(){
-      this.index=2;
+      this.activeIndex='/second';
       this.$router.push({path:'/second'});
     },
     mouseOver3:function(){
-      this.index=3;
+      this.activeIndex='/third';
       this.$router.push({path:'/third'});
     },
   },

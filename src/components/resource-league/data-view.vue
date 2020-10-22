@@ -56,6 +56,8 @@ export default {
   background-color: #2e324c !important;
   font-family: cursive;
   width: 100%;
+  height: 42px;
+  line-height: 42px;
 }
 .user {
   font-size: 8px;
@@ -63,14 +65,14 @@ export default {
 .password {
   font-size: 8px;
 }
-#content{
+#content {
   float: left;
   position: absolute;
   width: 800px;
-  background-color: #F8F8FA !important;
+  background-color: #f8f8fa !important;
   margin-top: -20px;
   margin-left: 4px;
-  box-shadow: 0px 0px 5px #F8F8FA;
+  box-shadow: 0px 0px 5px #f8f8fa;
 }
 #user-login {
   float: left;
@@ -82,7 +84,7 @@ export default {
   border-radius: 4px;
   background-color: #ddd0d096 !important;
   opacity: 0.9;
-  box-shadow: 0px 0px 15px #ddd0d096;
+  box-shadow: 0px 0px 15px #b9818196;
 }
 .el-button--primary {
   color: #fff;
@@ -93,10 +95,10 @@ export default {
   font-size: 10px;
   width: 100%;
 }
-.panel{
-  background-color:#F8F8FA !important;
-    height: 88%;
-    width: 76%;
-    box-shadow: 0px 0px 10px #F8F8FA;
+.panel {
+  background-color: #f8f8fa !important;
+  height: 88%;
+  width: 76%;
+  box-shadow: 0px 0px 10px #4e4e58;
 }
 </style>

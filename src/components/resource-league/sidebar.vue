@@ -10,19 +10,19 @@
       background-color="#2e324c"
       text-color="#fff"
       active-text-color="#ffd04b"
-      router="true"
+      router=true
     >
-      <el-menu-item style="padding-left:0%" index="1" @mouseover.native="mouseOver1">
+      <el-menu-item style="padding-left:0%" index="/third" @mouseover.native="mouseOver1">
         <div>
           <span>数据视角</span>
           <i class="el-icon-arrow-right"></i>
         </div>
       </el-menu-item>
-      <el-menu-item style="padding-left:0%" index="2">
+      <el-menu-item style="padding-left:0%;pointer-events: none" index="">
           <span>运维视角</span>
           <i class="el-icon-arrow-right"></i>
       </el-menu-item>
-      <el-menu-item style="padding-left:0%" index="3">
+      <el-menu-item style="padding-left:0%;pointer-events: none" index="">
         <span>应用视觉</span>
         <i class="el-icon-arrow-right"></i>
       </el-menu-item>
@@ -62,9 +62,7 @@ ul {
 export default {
   data() {
     return {
-      // activeIndex: "1",
-      // activeIndex2: "1",
-      index:"1"
+      index:"/third"
     };
   },
   methods: {
@@ -73,8 +71,7 @@ export default {
     },
     mouseOver1:function()
     {
-      this.index = 1;
-      // document.getElementById("menu1").setAttribute('font-size','100px');
+      this.index = '/third';
       this.$router.push({path:'/third'});
     },
   },

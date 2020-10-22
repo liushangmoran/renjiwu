@@ -11,36 +11,36 @@
       background-color="#2e324c"
       text-color="#fff"
       active-text-color="#ffd04b"
-      router
+      router=true
     >
-      <el-menu-item style="padding-left:0%" index="1">
+      <el-menu-item style="padding-left:0%;pointer-events: none" index="">
         <div>
           <span>计算资源</span>
           <i class="el-icon-arrow-right"></i>
         </div>
         
       </el-menu-item>
-      <el-menu-item style="padding-left:0%" index="2">
+      <el-menu-item style="padding-left:0%;pointer-events: none" index="">
           <span>存储资源</span>
           <i class="el-icon-arrow-right"></i>
       </el-menu-item>
-      <el-menu-item style="padding-left:0%" index="3">
+      <el-menu-item style="padding-left:0%;pointer-events: none" index="">
         <span>网络资源</span>
         <i class="el-icon-arrow-right"></i>
       </el-menu-item>
-      <el-menu-item style="padding-left:0%" index="4">
+      <el-menu-item style="padding-left:0%;pointer-events: none" index="">
         <span>数据资源</span>
         <i class="el-icon-arrow-right"></i>
       </el-menu-item>
-      <el-menu-item style="padding-left:0%" index="5">
+      <el-menu-item style="padding-left:0%;pointer-events: none" index="">
         <span>服务资源</span>
         <i class="el-icon-arrow-right"></i>
       </el-menu-item>
-      <el-menu-item style="padding-left:0%" index="6">
+      <el-menu-item style="padding-left:0%;pointer-events: none" index="">
         <span>人力资源</span>
         <i class="el-icon-arrow-right"></i>
       </el-menu-item>
-      <el-menu-item style="padding-left:0%" index="7" >
+      <el-menu-item style="padding-left:0%" index="/first" >
         <span>物理设备资源</span>
         <i class="el-icon-arrow-right"></i>
       </el-menu-item>
@@ -81,15 +81,13 @@ ul {
 export default {
   data() {
     return {
-      activeIndex: "1",
-      activeIndex2: "1",
-      index:"7"
+      index:"/first"
     };
   },
   methods: {
     handleSelect(key, keyPath) {
       console.log(key, keyPath);
-    },
+    }
   },
 };
 </script>
